@@ -363,6 +363,255 @@
       line-height: 1.6;
     }
 
+    /* Pricing Section (Section 3) */
+    .pricing-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px 24px 100px;
+      position: relative;
+      z-index: 10;
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 32px;
+      align-items: stretch;
+    }
+
+    .pricing-card {
+      background: rgba(15, 23, 42, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      padding: 40px 32px;
+      position: relative;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .pricing-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(99, 102, 241, 0.3);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
+    }
+
+    .pricing-card.featured {
+      background: rgba(30, 41, 59, 0.8);
+      border: 2px solid #6366f1;
+      box-shadow: 0 20px 40px rgba(99, 102, 241, 0.25);
+    }
+
+    .popular-tag {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: linear-gradient(135deg, #6366f1, #a855f7);
+      color: #ffffff;
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 4px 16px;
+      border-radius: 99px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .plan-name {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+
+    .plan-desc {
+      font-size: 0.9rem;
+      color: #94a3b8;
+      margin-bottom: 24px;
+    }
+
+    .plan-price {
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+    }
+
+    .plan-price span {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: #64748b;
+    }
+
+    .plan-features {
+      list-style: none;
+      margin-bottom: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      flex-grow: 1;
+    }
+
+    .plan-features li {
+      color: #cbd5e1;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .plan-features li::before {
+      content: '✓';
+      color: #818cf8;
+      font-weight: 800;
+    }
+
+    .plan-btn {
+      width: 100%;
+      text-align: center;
+      padding: 14px;
+      border-radius: 12px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .plan-btn-outline {
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #ffffff;
+    }
+
+    .plan-btn-outline:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.3);
+    }
+
+    /* CTA Banner Section (Section 4) */
+    .cta-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 24px 100px;
+      position: relative;
+      z-index: 10;
+    }
+
+    .cta-card {
+      background: linear-gradient(135deg, rgba(30, 41, 59, 0.9) 0%, rgba(15, 23, 42, 0.9) 100%);
+      border: 1px solid rgba(99, 102, 241, 0.3);
+      border-radius: 24px;
+      padding: 60px 40px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+    }
+
+    .cta-card::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .cta-title {
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 16px;
+    }
+
+    .cta-desc {
+      font-size: 1.1rem;
+      color: #94a3b8;
+      max-width: 600px;
+      margin: 0 auto 36px;
+    }
+
+    /* Footer */
+    .site-footer {
+      background-color: #070a0f;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 60px 24px 30px;
+      position: relative;
+      z-index: 10;
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr repeat(3, 1fr);
+      gap: 40px;
+      margin-bottom: 48px;
+    }
+
+    .footer-brand p {
+      color: #64748b;
+      margin-top: 16px;
+      font-size: 0.95rem;
+      max-width: 300px;
+    }
+
+    .footer-col h4 {
+      color: #ffffff;
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .footer-col a {
+      color: #94a3b8;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.3s ease;
+    }
+
+    .footer-col a:hover {
+      color: #ffffff;
+    }
+
+    .footer-bottom {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #64748b;
+      font-size: 0.85rem;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 16px;
+    }
+
+    .social-links a {
+      color: #64748b;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .social-links a:hover {
+      color: #818cf8;
+    }
+
     /* Responsive */
     @media (max-width: 768px) {
       .nav-links {
@@ -381,6 +630,10 @@
         font-size: 1.9rem;
       }
 
+      .cta-title {
+        font-size: 1.8rem;
+      }
+
       .stats-container {
         grid-template-columns: 1fr;
         gap: 24px;
@@ -394,6 +647,16 @@
       .btn-primary, .btn-secondary {
         width: 100%;
         justify-content: center;
+      }
+
+      .footer-container {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
       }
     }
   </style>
@@ -500,7 +763,117 @@
         </article>
       </div>
     </section>
+
+    <!-- Section 3: Pricing Section -->
+    <section class="pricing-section" id="harga">
+      <div class="section-header">
+        <span class="section-tag">Paket & Harga</span>
+        <h2 class="section-title">Pilih Paket Sesuai Kebutuhan Anda</h2>
+        <p class="section-subtitle">Harga transparan tanpa biaya tersembunyi. Upgrade atau downgrade kapan saja.</p>
+      </div>
+
+      <div class="pricing-grid">
+        <!-- Plan 1 -->
+        <div class="pricing-card" id="plan-starter">
+          <h3 class="plan-name">Starter</h3>
+          <p class="plan-desc">Cocok untuk project pribadi & landing page.</p>
+          <div class="plan-price">Rp 49.000<span>/bulan</span></div>
+          <ul class="plan-features">
+            <li>1 Core vCPU</li>
+            <li>2 GB RAM DDR4</li>
+            <li>30 GB NVMe Storage</li>
+            <li>1 TB Bandwidth</li>
+            <li>Support Komunitas</li>
+          </ul>
+          <a href="#pilih-starter" class="plan-btn plan-btn-outline" id="btn-starter">Pilih Starter</a>
+        </div>
+
+        <!-- Plan 2 (Featured) -->
+        <div class="pricing-card featured" id="plan-pro">
+          <div class="popular-tag">Paling Populer</div>
+          <h3 class="plan-name">Pro Developer</h3>
+          <p class="plan-desc">Ideal untuk aplikasi web bertrafik sedang.</p>
+          <div class="plan-price">Rp 129.000<span>/bulan</span></div>
+          <ul class="plan-features">
+            <li>2 Core vCPU</li>
+            <li>4 GB RAM DDR4</li>
+            <li>80 GB NVMe Storage</li>
+            <li>3 TB Bandwidth</li>
+            <li>Anti-DDoS Advanced</li>
+            <li>24/7 Priority Support</li>
+          </ul>
+          <a href="#pilih-pro" class="plan-btn btn-primary" id="btn-pro">Mulai Paket Pro</a>
+        </div>
+
+        <!-- Plan 3 -->
+        <div class="pricing-card" id="plan-enterprise">
+          <h3 class="plan-name">Enterprise</h3>
+          <p class="plan-desc">Untuk bisnis & aplikasi skala besar.</p>
+          <div class="plan-price">Rp 299.000<span>/bulan</span></div>
+          <ul class="plan-features">
+            <li>4 Core vCPU</li>
+            <li>8 GB RAM DDR4</li>
+            <li>160 GB NVMe Storage</li>
+            <li>Unlimited Bandwidth</li>
+            <li>Dedicated IP Address</li>
+            <li>Account Manager Khusus</li>
+          </ul>
+          <a href="#pilih-enterprise" class="plan-btn plan-btn-outline" id="btn-enterprise">Hubungi Sales</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Call to Action Banner -->
+    <section class="cta-section" id="dokumentasi">
+      <div class="cta-card">
+        <h2 class="cta-title">Siap Deploy Server VPS Pertama Anda?</h2>
+        <p class="cta-desc">Daftar hari ini dan nikmati uji coba gratis $10 saldo cloud untuk bulan pertama. Tanpa komitmen jangka panjang.</p>
+        <a href="#register" class="btn-primary" id="btn-cta-signup">Coba Gratis 14 Hari <span>→</span></a>
+      </div>
+    </section>
   </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <a href="#" class="brand-logo">VPS<span>Host</span></a>
+        <p>Solusi cloud VPS performa tinggi untuk pengembang web modern di seluruh Indonesia.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Produk</h4>
+        <ul>
+          <li><a href="#fitur">VPS NVMe Cloud</a></li>
+          <li><a href="#harga">Harga Paket</a></li>
+          <li><a href="#">Dedicated Server</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Bantuan</h4>
+        <ul>
+          <li><a href="#dokumentasi">Dokumentasi API</a></li>
+          <li><a href="#">Status Sistem</a></li>
+          <li><a href="#">Kontak Support</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Perusahaan</h4>
+        <ul>
+          <li><a href="#">Tentang Kami</a></li>
+          <li><a href="#">Blog Developer</a></li>
+          <li><a href="#">Kebijakan Privasi</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 VPSHost. Hak Cipta Dilindungi.</p>
+      <div class="social-links">
+        <a href="https://github.com/DaffaXtr/Belajar-hosting-vps" target="_blank">GitHub</a>
+        <a href="#">Twitter</a>
+        <a href="#">Discord</a>
+      </div>
+    </div>
+  </footer>
 
 </body>
 </html>
