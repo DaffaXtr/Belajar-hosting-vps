@@ -253,6 +253,116 @@
       font-weight: 500;
     }
 
+    /* Features Section (Section 2) */
+    .features-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px 24px 100px;
+      position: relative;
+      z-index: 10;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .section-tag {
+      display: inline-block;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #818cf8;
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+
+    .section-subtitle {
+      font-size: 1.1rem;
+      color: #94a3b8;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 28px;
+    }
+
+    .feature-card {
+      background: rgba(15, 23, 42, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      padding: 32px 24px;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .feature-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.5), transparent);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-6px);
+      background: rgba(30, 41, 59, 0.6);
+      border-color: rgba(99, 102, 241, 0.3);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .feature-card:hover::before {
+      opacity: 1;
+    }
+
+    .feature-icon {
+      width: 54px;
+      height: 54px;
+      background: rgba(99, 102, 241, 0.12);
+      border: 1px solid rgba(99, 102, 241, 0.25);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .feature-card:hover .feature-icon {
+      transform: scale(1.08);
+      background: rgba(99, 102, 241, 0.2);
+    }
+
+    .feature-card h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 12px;
+    }
+
+    .feature-card p {
+      font-size: 0.95rem;
+      color: #94a3b8;
+      line-height: 1.6;
+    }
+
     /* Responsive */
     @media (max-width: 768px) {
       .nav-links {
@@ -265,6 +375,10 @@
 
       .hero-subtitle {
         font-size: 1rem;
+      }
+
+      .section-title {
+        font-size: 1.9rem;
       }
 
       .stats-container {
@@ -302,8 +416,9 @@
     <a href="#login" class="nav-btn" id="nav-login">Masuk</a>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Main Content -->
   <main>
+    <!-- Section 1: Hero Section -->
     <section class="hero-section">
       <!-- Badge -->
       <div class="badge" id="hero-badge">
@@ -344,6 +459,45 @@
           <span class="stat-number">24/7</span>
           <span class="stat-label">Dukungan Tim Ahli</span>
         </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Features Section -->
+    <section class="features-section" id="fitur">
+      <div class="section-header">
+        <span class="section-tag">Kenapa Memilih Kami</span>
+        <h2 class="section-title">Fitur Unggulan untuk Performa Maksimal</h2>
+        <p class="section-subtitle">Infrastruktur cloud modern yang siap menunjang skalabilitas dan kecepatan aplikasi Anda.</p>
+      </div>
+
+      <div class="features-grid">
+        <!-- Card 1 -->
+        <article class="feature-card" id="feature-nvme">
+          <div class="feature-icon">🚀</div>
+          <h3>NVMe SSD Super Cepat</h3>
+          <p>Penyimpanan NVMe Enterprise berkecepatan tinggi hingga 5x lebih cepat dari SSD biasa untuk performa I/O optimal.</p>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="feature-card" id="feature-security">
+          <div class="feature-icon">🛡️</div>
+          <h3>Proteksi Anti-DDoS</h3>
+          <p>Sistem keamanan berlapis aktif 24/7 untuk melindungi server dari ancaman dan serangan siber tanpa biaya tambahan.</p>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="feature-card" id="feature-backup">
+          <div class="feature-icon">💾</div>
+          <h3>Otomatisasi Backup</h3>
+          <p>Jadwal snapshot harian dan pemulihan sistem secara instan dengan satu klik untuk keamanan data bisnis Anda.</p>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="feature-card" id="feature-root">
+          <div class="feature-icon">⚙️</div>
+          <h3>Akses Root & API Full</h3>
+          <p>Akses kontrol penuh ke OS dan integrasi REST API modern untuk fleksibilitas otomatisasi infrastruktur.</p>
+        </article>
       </div>
     </section>
   </main>
